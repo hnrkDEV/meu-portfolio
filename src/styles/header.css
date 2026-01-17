@@ -6,7 +6,6 @@ header {
   justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
-  padding: 0 20px;
 }
 
 nav a {
@@ -19,6 +18,7 @@ nav a {
   font-size: 1.5rem;
   letter-spacing: 0.05rem;
   font-style: normal;
+  padding-top: 10px;
 }
 
 .link-underline {
@@ -36,6 +36,7 @@ nav a {
   width: 100%;
   height: 2px;
   background-color: #ac5301;
+
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -57,4 +58,5 @@ ul {
   margin: 0;
   display: flex;
   justify-content: space-between;
+  padding-bottom: 10px;
 }

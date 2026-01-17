@@ -13,7 +13,6 @@ function Hero() {
         </p>
         <button className="hero-cta">Contactar!</button>
       </div>
-      <section class="hero-transition"></section>
     </>
   );
 }
