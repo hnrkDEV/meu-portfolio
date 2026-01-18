@@ -62,8 +62,9 @@
 
 .hero-img {
   width: 25rem;
-  border-radius: 19px;
+  border-radius: 21px;
   border-bottom-right-radius: 6rem;
+  border-top-left-radius: 6rem;
   z-index: 1;
 }
 
