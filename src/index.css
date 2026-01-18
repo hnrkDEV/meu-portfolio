@@ -1,30 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Protest+Guerrilla&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,700;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Lobster&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Protest+Guerrilla&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,700;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Titan+One&family=UnifrakturCook:wght@700&display=swap");
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  padding: 0;
-  margin: 0;
-  width: 100vw;
-  height: 100vh;
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Quicksand:wght@300..700&family=Rubik:wght@300..900&display=swap");
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #030303;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow: auto;
-  overflow-x: hidden;
-}
-
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  width: 100vw;
-  height: 100vh;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  background-color: #030303;
+  color: rgba(255, 255, 255, 0.87);
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
 }
