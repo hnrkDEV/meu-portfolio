@@ -113,6 +113,21 @@
   color: white;
 }
 
+.see-projects {
+  color: white;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.see-projects a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.see-projects:hover {
+  box-shadow: inset 0 0 0 1px white;
+}
+
 .ticker {
   width: 100%;
   height: 6vh;

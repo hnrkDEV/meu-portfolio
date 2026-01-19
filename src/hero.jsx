@@ -65,7 +65,13 @@ function Hero() {
 
           <motion.div className="hero-buttons" variants={itemVariants}>
             <button className="hero-button lets-talk">Vamos conversar</button>
-            <button className="hero-button">Ver projetos</button>
+            <button className="hero-button see-projects">
+              {" "}
+              <a href="https://github.com/hnrkDEV" target="_blank">
+                {" "}
+                Ver projetos
+              </a>
+            </button>
           </motion.div>
         </motion.div>
 
