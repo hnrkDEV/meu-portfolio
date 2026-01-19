@@ -31,7 +31,7 @@ function Education() {
       title: "Curso Técnico Fullstack Python",
       school: "EBAC",
       description:
-        "Participei do curso técnico de desenvolvimento fullstack com ênfase em Python na EBAC, adquirindo habilidades práticas em desenvolvimento web, bancos de dados e frameworks populares.",
+        "Atualmente realizo o curso técnico de desenvolvimento fullstack com ênfase em Python na EBAC, adquirindo habilidades práticas em desenvolvimento web, bancos de dados e frameworks populares.",
       local: "Online",
     },
   ];
@@ -60,8 +60,8 @@ function Education() {
               >
                 <h4>{item.title}</h4>
                 <span className="school">{item.school}</span> <br />
-                <span>{item.local}</span>
-                <p>{item.description}</p>
+                <span className="edu-local">{item.local}</span>
+                <p className="edu-desc">{item.description}</p>
               </div>
 
               <div className="timeline-center">

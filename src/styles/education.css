@@ -41,6 +41,17 @@
 .school {
   font-style: italic;
   color: #bbbbbbbe;
+  font-size: 1rem;
+}
+.edu-local {
+  font-style: italic;
+  color: #1dc0c5be;
+  font-size: 1rem;
+}
+
+.edu-desc {
+  color: #dddddd;
+  font-size: 1rem;
 }
 
 .timeline {
