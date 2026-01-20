@@ -59,7 +59,7 @@ function Education() {
   ];
 
   return (
-    <section className="education-section">
+    <section className="education-section" id="educacao">
       <h2 className="about-title">
         EDUCAÇÃO
         <div className="about-underline-wrapper">

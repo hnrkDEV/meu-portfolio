@@ -79,24 +79,31 @@ function Header() {
         </motion.a>
         <motion.a
           className="link-underline"
-          href="#projects"
+          href="#experiencias"
+          variants={linkVariants}
+        >
+          Experiências
+        </motion.a>
+        <motion.a
+          className="link-underline"
+          href="#stack"
           variants={linkVariants}
         >
           Stack
         </motion.a>
         <motion.a
           className="link-underline"
-          href="#experience"
+          href="#projetos"
           variants={linkVariants}
         >
-          Experiência
+          Projetos
         </motion.a>
         <motion.a
           className="link-underline"
-          href="#highlights"
+          href="#educacao"
           variants={linkVariants}
         >
-          Diferenciais
+          Educação
         </motion.a>
         <motion.a
           className="link-underline"

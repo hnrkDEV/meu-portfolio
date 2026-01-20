@@ -65,6 +65,7 @@ function StackPipeline() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.9, ease: "easeOut" }}
+      id="stack"
     >
       <h2 className="section-title">
         MINHA STACK
