@@ -17,13 +17,14 @@ function App() {
   Stack
   Projetos
   Educação
+  Contato
        */}
       <Header />
       <Hero />
       <About />
       <ExperienceSpotlight />
-      <Education />
       <StackPipeline />
+      <Education />
     </>
   );
 }
