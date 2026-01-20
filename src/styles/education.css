@@ -152,3 +152,28 @@
     text-align: left;
   }
 }
+
+/* ===== SCROLL REVEAL ===== */
+
+.timeline-item {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+/* Direção respeitando o layout */
+.timeline-item.left {
+  transform: translateX(-60px);
+}
+
+.timeline-item.right {
+  transform: translateX(60px);
+}
+
+/* Quando entra na tela */
+.timeline-item.show {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}

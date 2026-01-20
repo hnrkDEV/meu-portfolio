@@ -1,10 +1,23 @@
+import { motion } from "framer-motion";
 import "./styles/about.css";
+
 function About() {
   return (
-    <div className="about-section" id="about">
+    <motion.div
+      className="about-section"
+      id="about"
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{
+        duration: 0.8,
+        ease: "easeOut",
+      }}
+    >
       <div className="about-image">
         <img src="about-pic.jpg" alt="" className="about-img" />
       </div>
+
       <div className="section-title">
         <h2 className="title">
           SOBRE MIM
@@ -13,6 +26,7 @@ function About() {
             <span className="subtitle">Quem sou eu</span>
           </div>
         </h2>
+
         <div className="about-text">
           <p>
             Sou desenvolvedor de software e atuo na área de programação desde
@@ -31,6 +45,7 @@ function About() {
             assumir desafios cada vez maiores e gerar impacto através da
             tecnologia.
           </p>
+
           <div className="btn-container">
             <button
               className="about-btn"
@@ -43,15 +58,21 @@ function About() {
             >
               Baixar CV
             </button>
+
             <button className="about-btn">
-              <a href="https://wa.me/5581986171237" target="_blank">
+              <a
+                href="https://wa.me/5581986171237"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Me contactar
               </a>
             </button>
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
+
 export default About;

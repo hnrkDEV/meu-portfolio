@@ -1,6 +1,28 @@
+import { useEffect } from "react";
 import "./styles/education.css";
 
 function Education() {
+  useEffect(() => {
+    const items = document.querySelectorAll(".timeline-item");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.25,
+      },
+    );
+
+    items.forEach((item) => observer.observe(item));
+
+    return () => observer.disconnect();
+  }, []);
   const items = [
     {
       year: "2019",
@@ -23,7 +45,7 @@ function Education() {
       title: "Bootcamp em Desenvolvimento Fullstack",
       school: "Generation Brasil",
       description:
-        "Recebi treinamento intensivo e ao vivo em desenvolvimento fullstack, abrangendo tanto o frontend quanto o backend, com foco em tecnologias modernas, práticas ágeis e também em questões interpessoais.",
+        "Recebi treinamento intensivo e ao vivo em desenvolvimento fullstack, abrangendo tanto o frontend quanto o backend, com foco em tecnologias modernas, práticas ágeis e também em comunicações interpessoais.",
       local: "Online",
     },
     {
