@@ -51,8 +51,8 @@ function About() {
               className="about-btn"
               onClick={() => {
                 const link = document.createElement("a");
-                link.href = "/Joao_Henrique_Desenvolvedor_FullStack.pdf";
-                link.download = "Joao_Henrique_Desenvolvedor_FullStack.pdf";
+                link.href = "/joao_henrique_fullstack_developer.pdf";
+                link.download = "joao_henrique_fullstack_developer.pdf";
                 link.click();
               }}
             >
