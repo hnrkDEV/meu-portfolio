@@ -82,7 +82,7 @@ function Hero() {
           initial="hidden"
           animate="show"
         >
-          <img src="joao-pic2.png" alt="" className="hero-img" />
+          <img src="joao-pic3.png" alt="" className="hero-img" />
         </motion.div>
       </div>
 
