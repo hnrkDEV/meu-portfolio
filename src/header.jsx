@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import "./styles/header.css";
+import { useState } from "react";
 
 const headerVariants = {
   hidden: {
@@ -43,6 +44,8 @@ const linkVariants = {
 };
 
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <motion.header variants={headerVariants} initial="hidden" animate="show">
       {/* LOGO */}
@@ -61,57 +64,38 @@ function Header() {
         }}
       />
 
+
+      {/* HAMBURGER */}
+      <div
+        className={`hamburger ${menuOpen ? "active" : ""}`}
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <span />
+        <span />
+        <span />
+      </div>
+
       {/* NAV */}
-      <motion.nav variants={navVariants} initial="hidden" animate="show">
-        <motion.a
-          className="link-underline"
-          href="#home"
-          variants={linkVariants}
-        >
-          Início
-        </motion.a>
-        <motion.a
-          className="link-underline"
-          href="#about"
-          variants={linkVariants}
-        >
-          Sobre
-        </motion.a>
-        <motion.a
-          className="link-underline"
-          href="#experiencias"
-          variants={linkVariants}
-        >
-          Experiências
-        </motion.a>
-        <motion.a
-          className="link-underline"
-          href="#stack"
-          variants={linkVariants}
-        >
-          Stack
-        </motion.a>
-        <motion.a
-          className="link-underline"
-          href="#projetos"
-          variants={linkVariants}
-        >
-          Projetos
-        </motion.a>
-        <motion.a
-          className="link-underline"
-          href="#educacao"
-          variants={linkVariants}
-        >
-          Educação
-        </motion.a>
-        <motion.a
-          className="link-underline"
-          href="#contact"
-          variants={linkVariants}
-        >
-          Contato
-        </motion.a>
+      <motion.nav className={menuOpen ? "open" : ""} variants={navVariants} initial="hidden" animate="show">
+        {[
+          "Início",
+          "Sobre",
+          "Experiências",
+          "Stack",
+          "Projetos",
+          "Educação",
+          "Contato",
+        ].map((item, i) => (
+          <motion.a
+            key={i}
+            href={`#${item.toLowerCase()}`}
+            className="link-underline"
+            onClick={() => setMenuOpen(false)}
+            variants={linkVariants}
+          >
+            {item}
+          </motion.a>
+        ))}
       </motion.nav>
     </motion.header>
   );
