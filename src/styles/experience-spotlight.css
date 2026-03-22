@@ -109,6 +109,10 @@
 
 /* MOBILE */
 @media (max-width: 768px) {
+  .experience-spotlight {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   .spotlight-wrapper {
     grid-template-columns: 1fr;
   }
