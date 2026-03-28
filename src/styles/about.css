@@ -1,15 +1,17 @@
 .about-section {
   font-family: "Courier New", Courier, monospace;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.6;
-  width: 100vw;
+  width: 100%;
   color: #ffffff;
   background-color: black;
   margin: 0;
-  padding: 10rem 0 0 0;
+  padding: 8rem 6vw 2rem;
   display: flex;
   justify-content: center;
-  gap: 15rem;
+  align-items: center;
+  gap: 6rem;
+  flex-wrap: wrap;
 }
 
 .about-section h1 {
@@ -18,7 +20,8 @@
 }
 
 .about-img {
-  width: 20rem;
+  width: 100%;
+  max-width: 320px;
   border-radius: 2rem;
 }
 
@@ -66,7 +69,7 @@
 
 .about-text {
   margin-top: 1rem;
-  max-width: 35rem;
+  max-width: 500px;
   font-size: 1rem;
   color: #d1d5db;
   text-align: start;
@@ -102,4 +105,73 @@
 .about-btn a {
   text-decoration: none;
   color: inherit;
+}
+
+@media (max-width: 1024px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+    padding: 6rem 4vw;
+  }
+
+  .section-title {
+    align-items: center;
+  }
+
+  .title {
+    font-size: 2.4rem;
+    align-self: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .btn-container {
+    justify-content: center;
+  }
+
+  .about-img {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 4rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 0.75rem;
+  }
+
+  .underline {
+    width: 50%;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+  }
+
+  .about-img {
+    display: none;
+  }
+
+  .btn-container {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .about-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+  }
 }

@@ -69,7 +69,7 @@ function ExperienceSpotlight() {
         duration: 0.9,
         ease: "easeOut",
       }}
-      id="experiencias"
+      id="experiências"
     >
       <h2 className="section-title">
         EXPERIÊNCIA

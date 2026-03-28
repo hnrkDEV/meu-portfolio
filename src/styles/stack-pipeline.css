@@ -63,6 +63,10 @@
   box-shadow: 0 0 0 6px rgba(14, 165, 233, 0.25);
 }
 
+.pipeline-hint {
+  display: none;
+}
+
 .step-title {
   font-size: 0.85rem;
 }
@@ -140,11 +144,81 @@
 /* MOBILE */
 @media (max-width: 768px) {
   .pipeline-wrapper {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row; /* mantém horizontal */
     gap: 1.5rem;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 1rem 0.5rem;
+    margin: 2rem 0;
+
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
   }
 
+  /* remove linha */
   .pipeline-wrapper::before {
     display: none;
   }
+
+  /* cada step */
+  .pipeline-step {
+    min-width: 80px;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    padding: 0.5rem;
+  }
+
+  /* scrollbar invisível (mais clean) */
+  .pipeline-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pipeline-wrapper {
+    margin-top: 0;
+    padding-top: 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+  }
+  
+  .step-title {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+
+  .pipeline-wrapper::after {
+  content: "→";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: rgba(255,255,255,0.3);
+  animation: pulse 1.5s infinite;
 }
+.pipeline-hint {
+  display: block;
+  font-size: 0.7rem;
+  opacity: 0.4;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.2; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.2; }
+}
+
+}
+
+

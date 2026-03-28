@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import "./styles/stack-pipeline.css";
 
+
 const pipeline = [
   {
     key: "ide",
@@ -58,6 +59,8 @@ const pipeline = [
 function StackPipeline() {
   const [active, setActive] = useState(pipeline[0]);
 
+  
+
   return (
     <motion.section
       className="stack-pipeline"
@@ -100,6 +103,7 @@ function StackPipeline() {
       </div>
 
       {/* PIPELINE */}
+      <p className="pipeline-hint">Arraste para ver mais →</p>
       <div className="pipeline-wrapper">
         {pipeline.map((step, index) => (
           <button
@@ -113,6 +117,7 @@ function StackPipeline() {
             <span className="step-title">{step.title}</span>
           </button>
         ))}
+
       </div>
 
       {/* DETALHE */}
