@@ -4,6 +4,22 @@ import "./styles/experience-spotlight.css";
 
 const experiences = [
   {
+    role: "Desenvolvedor Júnior Fullstack",
+    company: "MV Sistemas",
+    period: "Mai 2026 — Atualmente",
+    description:
+      "Atuo diretamente no ecossistema de soluções voltadas para a área de Planos de Saúde, integrando a equipe responsável pela ilha do Autorizador Web. Minha rotina envolve o desenvolvimento e a sustentação de funcionalidades utilizando Java, JSP e JavaScript no front-end, além da manipulação e otimização de regras de negócio complexas por meio de PL/SQL no banco de dados. Para além da escrita de código, possuo uma atuação técnica que envolve infraestrutura e redes, sendo responsável pelo acesso e gerenciamento de servidores utilizando ferramentas como PuTTY e Remote Desktop para a realização de manutenções preventivas, deploy e análise detalhada de logs no Apache Tomcat. No dia a dia, contribuo ativamente para a resolução de chamados, correção de bugs e evolução do sistema, garantindo a estabilidade de uma aplicação crítica para a operação de saúde. Todo o fluxo de trabalho e versionamento de código é gerenciado de forma ágil com o suporte do Jira e do GitLab, assegurando entregas alinhadas com as melhores práticas de engenharia de software da empresa.",
+    stack: [
+      "Java 8",
+      "Javascript",
+      "JSP",
+      "PL/SQL",
+      "Oracle Database",
+      "Infraestrutura de Servidores",
+      "Manutenção de Sistemas Legados",
+    ],
+  },
+  {
     role: "Estagiário Fullstack",
     company: "Cattavento Tecnologia",
     period: "Mai 2025 — Nov 2025",
@@ -38,7 +54,7 @@ const experiences = [
     ],
   },
   {
-    role: "Estagiário de Suporte Técnico / Frontend",
+    role: "Estagiário de Frontend & Suporte Técnico",
     company: "IASSEPE",
     period: "Mar 2024 — Nov 2024",
     description:

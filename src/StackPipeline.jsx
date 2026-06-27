@@ -2,7 +2,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import "./styles/stack-pipeline.css";
 
-
 const pipeline = [
   {
     key: "ide",
@@ -10,9 +9,12 @@ const pipeline = [
     description:
       "Etapa inicial do ciclo de desenvolvimento, onde a solução começa a tomar forma. Envolve a organização do ambiente de desenvolvimento, definição de padrões de código, versionamento e boas práticas desde o primeiro commit. Aqui priorizo legibilidade, manutenibilidade e consistência do código, utilizando ferramentas que apoiam a validação, documentação e testes de APIs e integrações ao longo do desenvolvimento.",
     techs: [
+      "Eclipse",
+      "IntelliJ IDEA",
       "VS Code",
       "Git",
       "GitHub",
+      "GitLab",
       "CI/CD",
       "Postman",
       "Insomnia",
@@ -24,21 +26,21 @@ const pipeline = [
     title: "Backend",
     description:
       "Camada responsável pela lógica de negócio, regras do sistema e orquestração das operações. Atuo na construção de APIs robustas, escaláveis e seguras, aplicando conceitos de arquitetura em camadas, separação de responsabilidades, clean code e boas práticas de engenharia de software. O foco está na criação de endpoints bem estruturados, validação de dados, segurança, performance e integração eficiente com outras camadas do sistema.",
-    techs: ["Node.js", "NestJS", "TypeScript", "Java", "Spring Boot"],
+    techs: ["Java", "Spring Boot", "Node.js", "NestJS", "TypeScript"],
   },
   {
     key: "database",
     title: "Persistência de Dados",
     description:
       "Etapa dedicada à modelagem, persistência e gerenciamento dos dados da aplicação. Envolve a definição de estruturas adequadas, relacionamentos, índices e estratégias de acesso aos dados, sempre com foco em integridade, consistência e performance. Busco garantir que os dados suportem a lógica de negócio de forma eficiente, escalável e segura, considerando cenários reais de uso e crescimento do sistema.",
-    techs: ["MongoDB", "SQL"],
+    techs: ["MongoDB", "MySQL", "PL/SQL", "Oracle Database"],
   },
   {
     key: "frontend",
     title: "Frontend",
     description:
       "Camada responsável pela interface e pela experiência do usuário. Atuo na criação de interfaces modernas, responsivas e acessíveis, garantindo boa usabilidade, performance e clareza visual. O frontend é desenvolvido de forma integrada ao backend, consumindo APIs de maneira eficiente e refletindo corretamente as regras de negócio, sempre com foco em entregar uma experiência fluida e intuitiva ao usuário final.",
-    techs: ["React", "Vite", "JavaScript", "HTML5", "CSS3", "TailwindCSS"],
+    techs: ["React", "Vite", "JavaScript", "JSP", "CSS3", "TailwindCSS"],
   },
   {
     key: "devops",
@@ -58,8 +60,6 @@ const pipeline = [
 
 function StackPipeline() {
   const [active, setActive] = useState(pipeline[0]);
-
-  
 
   return (
     <motion.section
@@ -82,17 +82,17 @@ function StackPipeline() {
         <div className="stack-groups">
           <div className="stack-group">
             <span className="group-title">Backend</span>
-            <p>Node.js · NestJS · TypeScript · Java · Spring Boot</p>
+            <p>Java · Spring Boot · Node.js · NestJS · TypeScript</p>
           </div>
 
           <div className="stack-group">
             <span className="group-title">Frontend</span>
-            <p>React · Vite · JavaScript · HTML5 · CSS3 · TailwindCSS</p>
+            <p>React · Vite · JSP · JavaScript · CSS3 · TailwindCSS</p>
           </div>
 
           <div className="stack-group">
             <span className="group-title">Banco de Dados</span>
-            <p>MongoDB · SQL</p>
+            <p>MongoDB · MySQL · PL/SQL · Oracle Database</p>
           </div>
 
           <div className="stack-group">
@@ -117,7 +117,6 @@ function StackPipeline() {
             <span className="step-title">{step.title}</span>
           </button>
         ))}
-
       </div>
 
       {/* DETALHE */}

@@ -73,10 +73,10 @@
   width: 100%;
   max-width: 350px;
   border-radius: 21px;
-  border-bottom-right-radius: 6rem;
-  border-top-left-radius: 6rem;
+  border-bottom-right-radius: 8rem;
+  border-top-left-radius: 8rem;
   z-index: 1;
-  margin-right: 200px;
+  margin-right: 250px;
 }
 
 /* DESCRIÇÃO */
